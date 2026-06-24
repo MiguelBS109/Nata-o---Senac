@@ -1,4 +1,4 @@
-const API = "http://localhost:3000"
+const API = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" ? "http://localhost:3000" : "https://miguel-natacao.onrender.com";
 async function cadastrarAluno(event) {
     event.preventDefault();
     const nome = document.getElementById("nome").value;
